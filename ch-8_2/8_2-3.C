@@ -12,10 +12,10 @@ main()
 	do
 	{
 		if(v%2==0)
-
+        {
 			printf("%d ",v);
-			v++;
-
+        }
+        v++;
 	}while(v<=n);
 
 	getch();
