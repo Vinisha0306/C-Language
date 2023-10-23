@@ -19,7 +19,7 @@ int main()
         a++;
     }
 
-    for(int i=0;i<=count;i++)
+    for(int i=0;A[i]!=NULL;i++)
     {
         if(A[i]==rev[i])
         {
