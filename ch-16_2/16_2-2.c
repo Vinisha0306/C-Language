@@ -1,69 +1,31 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int input()
+void inputString(char name[])
 {
-    int n;
-    scanf("%d",&n);
-
-    return n;
+    gets(name);
 }
 
-void arrayinput(int a[],int n)
+int lenth(char name[])
 {
-    for(int i=0;i<n;i++)
+    int count=0;
+
+    for(int i=0;name[i]!=NULL;i++)
     {
-        printf("Enter a[%d]:",i);
-        scanf("%d",&a[i]);
+        count++;
     }
-}
-
-void arrayoutput(int a[],int n)
-{
-    for(int i=0;i<n;i++)
-    {
-        printf("array %d : %d\n",i,a[i]);
-    }
-}
-
-int arraysum(int a[],int n)
-{
-    printf("\n\n --:  Array input  :-- \n\n ");
-    arrayinput(a,n);
-    printf("\n\n --:  Array output  :-- \n\n ");
-    arrayoutput(a,n);
-    int sum=0;
-    for(int i=0;i<n;i++)
-    {
-        sum+=a[i];
-    }
-
-    return sum;
-}
-
-int arrayavg(int a[],int n)
-{
-    int sum;
-    printf("\n\n --:  Array input  :-- \n\n ");
-    arrayinput(a,n);
-    printf("\n\n --:  Array output  :-- \n\n ");
-    arrayoutput(a,n);
-    sum=arraysum(a,n);
-
-    return sum/n;
+    return count;
 }
 
 int main()
 {
-    int size,avg;
+    char name[20];
 
-    printf("Enter array size:");
-    size=input();
+    printf("Enter name :");
+    inputString(name);
 
-    int a[size];
+    int size=lenth(name);
 
-    avg=arrayavg(a,size);
-
-    printf("\n\nThe sum of an array : %d",avg);
+    printf("\n\tstring lenth:%d",size);
 
     return 0;
 }

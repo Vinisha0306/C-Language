@@ -17,15 +17,15 @@ int main()
     {
         if(count>6)
         {
-            if (password>='A' && password<='Z')
+            if (password[i]>='A' && password[i]<='Z')
             {
                 a=1;
             }
-            else if (password>='a' && password<='z')
+            else if (password[i]>='a' && password[i]<='z')
             {
                 b=1;
             }
-            else if (password>='0' && password<='9')
+            else if (password[i]>='0' && password[i]<='9')
             {
                 c=1;
             }
