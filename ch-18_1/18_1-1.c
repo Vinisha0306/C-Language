@@ -2,26 +2,27 @@
 
 int main()
 {
-    int a=10;
+    int n;
 
-    printf("Int \t: %lu\n",sizeof(int));
-    printf("Int A \t: %lu\n",sizeof(a));
-    printf("Int 10 \t: %lu\n",sizeof(10));
-    printf("float \t: %lu\n",sizeof(float));
-    printf("char \t: %lu\n",sizeof(char));
-    printf("long int \t: %lu\n",sizeof(long int));
-    printf("long long Int \t: %lu\n",sizeof(long long int));
+    printf("Enter array size:");
+    scanf("%d",&n);
 
-    int array[20]= {10,20,30,40,50} ;
+    int a[n],*ptr[n];
 
-    printf("Array \t: %zu\n",sizeof(array));
+    for(int i=0;i<n;i++)
+    {    
+        printf("Enter array[%d]:",i);
+        scanf("%d",&a[i]);
+        a[i]*=a[i];
+        ptr[i]=&a[i];
+    }
 
-    char string[20]="vinisha0306";
+    printf("Square of each element:\n");
 
-    printf("char\t: %d",sizeof(string));
+    for(int i=0;i<n;i++)
+    {
+        printf("%d,",*ptr[i]);
+    }
 
-    int ans=sizeof(array)/sizeof(array[0]);
-
-    printf("\n\narray size\t: %d",ans);
     return 0;
 }

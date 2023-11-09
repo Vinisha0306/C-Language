@@ -2,24 +2,24 @@
 
 int main()
 {
-    int a=100,*ptr;
-    ptr=&a;
+    int a,b,*ptra,*ptrb;
 
-    printf("A nomal value:%d\n",a);
-    printf("A pointer value:%d\n",*ptr);
-    printf("A address:%u\n\n",&a);
+    printf("Enter a:");
+    scanf("%d",&a);
 
-    a=50;
+    printf("Enter b:");
+    scanf("%d",&b);
 
-    printf("A nomal value:%d\n",a);
-    printf("A pointer value:%d\n",*ptr);
-    printf("A address:%u\n\n",&a);
+    ptra=&a;
+    ptrb=&b;
 
-    *ptr=25;
+    printf("Before swapping: \nx: %d \ny: %d\n\n",a,b);
 
-    printf("A nomal value:%d\n",a);
-    printf("A pointer value:%d\n",*ptr);
-    printf("A address:%u\n\n",&a);
+    *ptra=*ptra+*ptrb;
+    *ptrb=*ptra-*ptrb;
+    *ptra=*ptra-*ptrb;
+
+    printf("After swapping: \nx: %d\ny: %d",*ptra,*ptrb);
 
     return 0;
 }
