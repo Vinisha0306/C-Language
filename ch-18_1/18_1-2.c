@@ -13,13 +13,13 @@ int main()
     ptra=&a;
     ptrb=&b;
 
-    printf("Before swapping: \nx: %d \ny: %d\n\n",a,b);
+    printf("Before swapping: \na: %d \nb: %d\n\n",a,b);
 
     *ptra=*ptra+*ptrb;
     *ptrb=*ptra-*ptrb;
     *ptra=*ptra-*ptrb;
 
-    printf("After swapping: \nx: %d\ny: %d",*ptra,*ptrb);
+    printf("After swapping: \na: %d\nb: %d",*ptra,*ptrb);
 
     return 0;
 }
