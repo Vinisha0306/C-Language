@@ -1,10 +1,8 @@
 #include<stdio.h>
-#include<conio.h>
-main()
+
+int main()
 {
 	int i,last,first,sum=0;
-	
-	clrscr();
 
 	printf("Enter any number:");
 	scanf("%d",&i);
@@ -23,5 +21,5 @@ main()
 	
 	printf("first and last number sum:%d",sum);
 
-	getch();
+	return 0;
 }

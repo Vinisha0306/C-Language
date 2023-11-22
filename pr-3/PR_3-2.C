@@ -1,10 +1,8 @@
 #include<stdio.h>
-#include<conio.h>
-main()
+
+int main()
 {
 	int i,count=0;
-
-	clrscr();
 
 	printf("Enter any number:");
 	scanf("%d",&i);
@@ -17,6 +15,6 @@ main()
 
 	printf("total number of digit:%d",count);
 
-	getch();
+	return 0;
 
 }

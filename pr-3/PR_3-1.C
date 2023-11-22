@@ -1,10 +1,8 @@
 #include<stdio.h>
-#include<conio.h>
-main()
+
+int main()
 {
 	char i='a';
-
-	clrscr();
 
 	do
 	{
@@ -13,5 +11,6 @@ main()
 	}
 	while(i<='z');
 
-	getch();
+	return 0;
+
 }
