@@ -13,7 +13,6 @@ int main()
     {    
         printf("Enter array[%d]:",i);
         scanf("%d",&a[i]);
-        a[i]*=a[i];
         ptr[i]=&a[i];
     }
 
@@ -21,7 +20,7 @@ int main()
 
     for(int i=0;i<n;i++)
     {
-        printf("%d,",*ptr[i]);
+        printf("%d,",(*ptr[i])*(*ptr[i]));
     }
 
     return 0;

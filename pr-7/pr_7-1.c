@@ -39,9 +39,13 @@ int mod(int a,int b)
     return a%b;
 }
 
-void calc(int a,int b)
+
+int main()
 {
-    int c,ans;
+    int a,b,c,ans;
+    
+    while(c!=0)
+    {
 
     printf("\nEnter.....\n\n");
     printf("1) Addition\n");
@@ -53,51 +57,44 @@ void calc(int a,int b)
     printf("Enter your choice:");
     scanf("%d",&c);
     
-    switch(c)
-    {
+        switch(c)
+        {
         case 1: 
             a=input(a);
             b=inputb(b);
             ans=sum(a,b);
             printf("\n\n\tAddition:%d",ans);
-            calc(a,b);
+            break;
             
         case 2: 
             a=input(a);
             b=inputb(b);
             ans=sub(a,b);
             printf("\n\n\tSubtraction:%d",ans);
-            calc(a,b);
+            break;
             
         case 3: 
             a=input(a);
             b=inputb(b);
             ans=mul(a,b);
             printf("\n\n\tMultiplication:%d",ans);
-            calc(a,b);
+            break;
             
         case 4: 
             a=input(a);
             b=inputb(b);
             ans=div(a,b);  
-            printf("\n\n\tDivision:%d",ans);
-            calc(a,b);      
+            printf("\n\n\tDivision:%d",ans);  
+            break;    
             
         case 5: 
             a=input(a);
             b=inputb(b);
             ans=mod(a,b);
             printf("\n\n\tModulus:%d",ans);
-            calc(a,b);
-
-        case 0: 
             break;
-    }
-}
 
-int main()
-{
-    int a,b;
-    calc(a,b);
+        }
+    }
     return 0;
 }
