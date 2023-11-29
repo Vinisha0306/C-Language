@@ -7,6 +7,7 @@ int main()
     printf("Enter array's size:");
     scanf("%d",&n);
     
+    int k=n-1;
     int a[n];
     int *p1[n],**p2[n];
     
@@ -25,12 +26,13 @@ int main()
     
     for(int i=0;i<n;i++)
     {
-        p2[i]=&p1[i];
+        p2[k]=&p1[i];
+        k--;
     }
-    
+    printf("array ");
     printf("\n\nReverse array elements:\n");
     
-    for(int i=n-1;i>=0;i--)
+    for(int i=0;i<n;i++)
     {
         printf("%d ",**p2[i]);
     }
