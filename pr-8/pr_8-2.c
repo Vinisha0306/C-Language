@@ -1,41 +1,48 @@
 #include<stdio.h>
 
-void arraycube(int *a)
+void cube(int n,int a[n][n])
 {
-    (*a)=(*a)*(*a);
+int *ptr[n][n];
+
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<n;j++)
+        {
+            ptr[i][j]=&a[i][j];
+        }
+    }
+
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<n;j++)
+        {
+            printf("%d ",(*ptr[i][j])*(*ptr[i][j])*(*ptr[i][j]));
+        }
+        printf("\n");
+    }
+
 }
 
 int main()
 {
     int n;
-
+    
     printf("Enter array size:");
     scanf("%d",&n);
-
-    int array[n][n];
-
-    printf("\n\nEnter array's elements:\n");
-
+    
+    int a[n][n];
+    int *ptr[n][n];
+    
     for(int i=0;i<n;i++)
     {
         for(int j=0;j<n;j++)
         {
-            printf("array[%d][%d]:",i,j);
-            scanf("%d",&array[i][j]);
+            printf("a[%d][%d]:",i,j);
+            scanf("%d",&a[i][j]);
         }
     }
-
-    printf("cubes of all elements:");
-
-    for(int i=0;i<n;i++)
-    {
-        for(int j=0;j<n;j++)
-        {
-            arraycube(array[i][j]);
-            printf("%d",array[i][j]);
-        }
-        printf("\n");
-    }
-
+    
+    cube(n,a);
+   
     return 0;
 }

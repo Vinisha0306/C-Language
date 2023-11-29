@@ -3,24 +3,24 @@
 
 int main()
 {
-    int count=0;
-    char name[20];
+    char string[20];
     char *ptr[20];
-
-    printf("Enter string:");
-    gets(name);
+    int count=0;
     
-    for(int i=0;name[i]!='\0';i++)
+    printf("Enter any string:");
+    gets(string);
+    
+    for(int i=0;string[i]!=NULL;i++)
     {
-        ptr[i]=&name[i];
+        ptr[i]=&string[i];
     }
-
-    for(int i=0;name[i]!='\0';i++)
+    
+    for(int i=0;ptr[i]!=NULL;i++)
     {
         count++;
     }
-
-    printf("The length of a string is:%d",count);
-
+    
+    printf("\n\nThe length of a string: %d",count);
+    
     return 0;
 }
